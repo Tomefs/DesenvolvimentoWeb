@@ -1,0 +1,40 @@
+.aot{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    position: fixed;
+    z-index: -1;
+    overflow: hidden;
+    animation: fade 2s;
+}
+
+.background img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 30%;
+    animation: fade-up 0.4s;
+    object-fit: cover;
+}
+
+.background::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 200px 30px rgb(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+#content-container{
+    width: 50%;
+    margin: 6rem 20rem 5rem 4rem;
+    padding-bottom: 20px;
+    animation: fade 1s;
+}

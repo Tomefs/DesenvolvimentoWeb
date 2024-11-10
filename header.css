@@ -1,0 +1,120 @@
+@font-face {
+    font-family: poppins-extralight;
+    src: url(fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url(fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+
+@keyframes fade-up{
+    0%{
+        transform: translateY(30px) scale(0.7);
+    }
+
+    100%{
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-right{
+    0%{
+        transform: translateX(-10vw);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all 0.4s;
+    color: #F8DFBF;
+    text-decoration: none;
+    font-family: poppins-extralight;
+    z-index: 3;
+    transition: 0.5s ease-in-out;
+}
+
+body{
+    background-color: rgb(46, 46, 46);
+}
+
+h1{
+    font-family: poppins-bold;
+    text-transform: uppercase;
+    font-size: 5rem;
+    line-height: 5rem;
+    animation: fade-right 0.5s;
+}
+
+h3{
+    font-size: 1.4rem;
+    padding: 20px 0 40px 0;
+    animation: fade-right 0.6s;
+}
+
+button{
+    position: relative;
+    border: 0.2vw solid #F8DFBF;
+    border-radius: 10vw;
+    background-color: rgb(46, 46, 46, 0.1);
+    margin: 0 10px 0 0;
+}
+
+button::after{
+    content: '';
+    position: absolute;
+    background-color: #F8DFBF;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 50vw;
+    opacity: 0;
+    transition: 0.25s ease;
+    z-index: -1;
+    color: rgb(46, 46, 46);
+    cursor: pointer;
+}
+
+button:hover::after{
+    opacity: 1;
+    width: 100%;
+}
+
+button:hover{
+    color: rgb(46, 46, 46);
+    cursor: pointer;
+}
+
+.about{
+    display: flex;
+    justify-content: end;
+    padding: 2rem;
+}
+
+.about button{
+    font-size: 1rem;
+    padding: 5px 20px 5px 20px;
+}
+
+.bt-regiments button{
+    font-size: 2rem;
+    padding: 5px 100px 5px 100px;
+}
